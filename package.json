@@ -1,0 +1,15 @@
+{
+  "name": "altyapi",
+  "version": "1.0.0",
+  "description": "by thegears",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "thegears",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.3.0",
+    "fs": "^0.0.1-security"
+  }
+}
