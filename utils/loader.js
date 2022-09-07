@@ -45,7 +45,7 @@ module.exports = (client) => {
     fs.readdirSync("./events/").forEach((f) => {
         let event = require(`../events/${f}`);
 
-        client.on(`${event.name}`, (...args) => {
+        client.on(`${f.replace(".js","")}`, (...args) => {
             event.run(client, ...args);
         });
     });
