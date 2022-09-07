@@ -3,7 +3,6 @@ const {
 } = require("discord.js");
 
 module.exports = {
-    name: "interactionCreate",
     async run(client, interaction) {
         if (interaction.isChatInputCommand()) client.interactions.filter(int => int.type == "slash").get(interaction.commandName).run({
             client,
