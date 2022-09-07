@@ -29,7 +29,7 @@ module.exports = (client) => {
         version: '10'
     }).setToken(config.token);
 
-    client.on("ready", () => (async() => {
+    client.once("ready", () => (async() => {
         try {
 
             await rest.put(Routes.applicationCommands(client.user.id), {
