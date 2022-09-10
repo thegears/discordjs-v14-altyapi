@@ -12,11 +12,11 @@ module.exports = {
             client,
             interaction
         })
-        else if (interaction.type !== InteractionType.ModalSubmit) client.interactions.filter(int => int.type == "modal").get(interaction.commandName).run({
+        else if (interaction.type == InteractionType.ModalSubmit) client.interactions.filter(int => int.type == "modal").get(interaction.customId).run({
             client,
             interaction
         })
-        else if (interaction.isSelectMenu()) client.interactions.filter(int => int.type == "select_menu").get(interaction.commandName).run({
+        else if (interaction.isSelectMenu()) client.interactions.filter(int => int.type == "select_menu").get(interaction.customId).run({
             client,
             interaction
         });
